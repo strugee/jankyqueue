@@ -1,7 +1,7 @@
 {
     "name": "jankyqueue",
 
-    "description": "Just enough queueing to cause problems",
+    "description": "Knuckle-dragger in-process queuing",
 
     "homepage": "http://github.com/e14n/jankyqueue",
 
@@ -43,5 +43,4 @@
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
         }
     ]
-
 }
