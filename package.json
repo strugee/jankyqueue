@@ -1,0 +1,47 @@
+{
+    "name": "jankyqueue",
+
+    "description": "Just enough queueing to cause problems",
+
+    "homepage": "http://github.com/e14n/jankyqueue",
+
+    "version": "0.1.0-alpha1",
+
+    "keywords": ["queue", "janky", "step"],
+
+    "engines": {
+        "node": "0.8.x"
+    },
+
+    "author": "Evan Prodromou <evan@e14n.com>",
+
+    "scripts": {
+        "test": "vows -i test/*-test.js"
+    },
+
+    "main": "./lib/jankyqueue.js",
+
+    "directories": {
+        "lib": "./lib/"
+    },
+
+    "devDependencies": {
+        "vows": "0.6.x"
+    },
+
+    "dependencies": {
+    },
+
+    "repository": {
+        "type":  "git",
+        "url": "git://github.com/e14n/jankyqueue.git"
+    },
+
+    "licenses": [
+        {
+            "type": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    ]
+
+}
