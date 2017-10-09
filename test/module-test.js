@@ -120,6 +120,34 @@ suite.addBatch({
                     assert.ifError(err);
                 }
             }
+        },
+        "and we create a third instance": {
+            topic: function(Queue) {
+                return new Queue(64);
+            },
+            "it works": function(q) {
+                assert.ok(q);
+            },
+	        "and we enqueue some operations and don't specify a callback": {
+		        topic: function(q) {
+                    var i = 0,
+                        counter = 10,
+                        decr = function(j, cb) {
+                            // do something with j
+	                        counter--;
+	                        cb(null);
+                        };
+
+                    for (i = 0; i < 100; i++) {
+                        q.enqueue(decr, [i]);
+                    }
+
+			        setTimeout(this.callback, 1000);
+		        },
+                "it works": function(err) {
+                    assert.ifError(err);
+                }
+	        }
         }
     }
 });
